@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="main">
+	<head>
+		<script type="text/javascript" src="./js/angular.min.js"></script>
+		<script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    	<script type="text/javascript" src="./js/ng-table.min.js"></script>
+		<script type="text/javascript" src="./js/ui-bootstrap-tpls-0.12.1.min.js"></script>
+
+    	<link rel="stylesheet" href="./styles/ng-table.min.css" />
+		<link rel="stylesheet" href="./styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="./styles/index.css" />
+	</head>
+	<body ng-controller="MainCtrl">
+		<div id="container">
+			<div class="header">Header</div>
+			<div class="mainbody" style="width: 100%; display: table;">
+				<div style="display: table-row">
+					<div ng-include="menuHTML" ng-show="showMenuHTML" style="width: 200px; display: table-cell; border-right: 1px solid #000;"></div>
+					<div id="contentHTML" ng-include="contentHTML"></div>
+				</div>
+			</div>
+			<div class="footer">Footer</div>
+		</div>
+
+
+		<script type="text/javascript" src="./scripts/app.js"></script>
+		<script type="text/javascript" src="./scripts/controllerCollection.js"></script>
+		<script type="text/javascript" src="./scripts/directiveCollection.js"></script>
+	</body>
+</html>
