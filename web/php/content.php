@@ -6,4 +6,4 @@ ini_set("display_errors", 1);
 	$dbi->connect();
 	$dbi->query("SELECT * FROM monthly LIMIT 100");
 	print json_encode($dbi->fetch());
-?>>
+?>
