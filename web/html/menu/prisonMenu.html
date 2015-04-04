@@ -1,0 +1,13 @@
+<div ng-controller="CollapseCtrl">
+	<ul>
+		<li ng-click="changeContent('prisonerList')">Prisoner</li>
+		<li ng-click="isCollapsed = !isCollapsed"><a href="">Commissary</a></li>
+		<li collapse="isCollapsed">
+			<ul>
+				<li>Transactions</li>
+				<li>Inventory</li>
+			</ul>
+		</li>
+		<li>Visitors</li>
+	</ul>
+</div>

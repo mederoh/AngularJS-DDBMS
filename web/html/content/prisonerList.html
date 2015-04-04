@@ -1,0 +1,9 @@
+<div ng-controller='PrisonTableCtrl'>
+	<table ng-table="tableParams" class="table">
+		<tr ng-repeat="user in $data">
+	    		<td data-title="'WBAN'" sortable="'name'" ng-click="loadInfo(user.wban)">{{user.wban}}</td>
+	    		<td data-title="'Year Month'" sortable="'age'">{{user.yearmonth}}</td>
+		</tr>
+	</table>
+</div>
+
