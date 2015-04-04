@@ -1,16 +1,19 @@
 <?php
 	class DBI {
-		private $HOST = "";
+		private $HOST = "SQL5012.Smarterasp.net";
 		private $PORT = 5432;
-		private $DBNAME = "";
-		private $USERNAME = "";
-		private $PASSWORD = "";
-
+		private $DBNAME = "DB_9BAA67_ProjectFacility1";
+		private $USERNAME = "DB_9BAA67_ProjectFacility1_admin";
+		private $PASSWORD = "csci7431";
+        private $connectionInfo = null;
 		private $dbh = null;
 		private $sth = null;
 
 		public function connect() {
-			$this->dbh = pg_connect("host=$this->HOST port=$this->PORT dbname=$this->DBNAME user=$this->USERNAME password=$this->PASSWORD") or die('connection failed');
+            $this->connectionInfo = array("UID" => $this->USERNAME,
+                                          "PWD" => $this->PASSWORD,
+                                          "Database" => $this->DBNAME);
+            $this->dbh = sqlsrv_connect($this->HOST, $this->connectionInfo)
 		}
 
 		public function disconnect() {
@@ -18,12 +21,13 @@
 		}
 
 		public function query($sql) {
-			$this->sth = pg_query($this->dbh, $sql) or die("cannot query");
+			$this->sth = sqlsrv_query($this->dbh, $sql) or die("Cannot connect to database");
 		}
 
 		public function fetch() {
 			$rows = array();
-			while($r = pg_fetch_assoc($this->sth)) {
+            
+			while($r = sqlsrv_fetch_array($this->sth)) {
 				$rows[] = $r;
 			}
 
