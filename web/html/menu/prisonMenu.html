@@ -1,13 +1,23 @@
 <div ng-controller="CollapseCtrl">
-	<ul>
-		<li ng-click="changeContent('prisonerList')">Prisoner</li>
-		<li ng-click="isCollapsed = !isCollapsed"><a href="">Commissary</a></li>
-		<li collapse="isCollapsed">
-			<ul>
-				<li>Transactions</li>
-				<li>Inventory</li>
-			</ul>
-		</li>
-		<li>Visitors</li>
-	</ul>
+    <ul class="nav nav-sidebar">
+        <li ng-click="changeContent('prisonerList')">
+            <a href="#">Prisoner</a>
+        </li>
+        <li ng-click="isCollapsed = !isCollapsed">
+            <a href="#">Commissary</a>
+        </li>
+        <li collapse="isCollapsed">
+            <ul class="nav nav-sidebar">
+                <li>
+                    <a href="#">Transactions</a>
+                </li>
+                <li>
+                    <a href="#">Inventory</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Visitors</a>
+        </li>
+    </ul>
 </div>

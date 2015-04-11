@@ -1,30 +1,172 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="main">
-	<head>
-		<script type="text/javascript" src="./js/angular.min.js"></script>
-		<script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
-		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    	<script type="text/javascript" src="./js/ng-table.min.js"></script>
-		<script type="text/javascript" src="./js/ui-bootstrap-tpls-0.12.1.min.js"></script>
-    	<link rel="stylesheet" href="./styles/ng-table.min.css" />
-		<link rel="stylesheet" href="./styles/bootstrap.min.css" />
-		<link rel="stylesheet" href="./styles/index.css" />
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+    <title>Homepage</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/ng-table.min.css" />
+    <link rel="stylesheet" href="./css/sticky-footer.css" />
+    <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+    <script type="text/javascript" src="js/jquery.2.1.3.min.js"></script>
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script type="text/javascript" src="js/classie.js"></script>
+    <script type="text/javascript" src="./js/ng-table.min.js"></script>
+    <script type="text/javascript" src="./js/ui-bootstrap-tpls-0.12.1.min.js"></script>
+
+
+    <!--[if lt IE 9]>
+        <script src="js/respond-1.1.0.min.js"></script>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/html5element.js"></script>
+    <![endif]-->
+
+
+</head>
 	<body ng-controller="MainCtrl">
 		<div id="container">
-			<div class="header">Header</div>
+            <nav class="main-nav-outer" id="test" style="z-index: auto; position: relative; top: auto;">
+                <!--main-nav-start-->
+                <div class="container">
+                    <ul class="main-nav">
+                        <li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
+                        <li><a href="#client" ng-click="changeMenu('prisonMenu')">Prison</a></li>
+                        <li><a href="#team" ng-click="changeMenu('researchMenu')">Research</a></li>
+                    </ul>
+                    <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+                </div>
+            </nav>
 			<div class="mainbody" style="width: 100%; display: table;">
 				<div style="display: table-row">
-					<div ng-include="menuHTML" ng-show="showMenuHTML" style="width: 200px; display: table-cell; border-right: 1px solid #000;"></div>
-					<div id="contentHTML" ng-include="contentHTML"></div>
+                    <div class="col-sm-3 col-md-2 sidebar">
+                        <div ng-include="menuHTML" ng-show="showMenuHTML"></div>
+                    </div> 
+                    <div id="contentHTML" ng-include="contentHTML" class="col-sm-9 col-md-10"></div>
 				</div>
 			</div>
-			<div class="footer">Footer</div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
+                    <span class="copyright">Copyright BGH <a href="#">BGH</a>.</span>
+                </div>
+            </footer>
 		</div>
 
 
-		<script type="text/javascript" src="./scripts/app.js"></script>
-		<script type="text/javascript" src="./scripts/controllerCollection.js"></script>
-		<script type="text/javascript" src="./scripts/directiveCollection.js"></script>
+        <script type="text/javascript" src="./js/app.js"></script>
+		<script type="text/javascript" src="./js/controllerCollection.js"></script>
+		<script type="text/javascript" src="./js/directiveCollection.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function (e) {
+                $('#test').scrollToFixed();
+                $('.res-nav_click').click(function () {
+                    $('.main-nav').slideToggle();
+                    return false
+
+                });
+
+            });
+        </script>
+
+        <script>
+            wow = new WOW(
+              {
+                  animateClass: 'animated',
+                  offset: 100
+              }
+            );
+            wow.init();
+            document.getElementById('').onclick = function () {
+                var section = document.createElement('section');
+                section.className = 'wow fadeInDown';
+                this.parentNode.insertBefore(section, this);
+            };
+        </script>
+
+
+        <script type="text/javascript">
+            $(window).load(function () {
+
+                $('.main-nav li a').bind('click', function (event) {
+                    var $anchor = $(this);
+
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top - 102
+                    }, 1500, 'easeInOutExpo');
+                    /*
+                    if you don't want to use the easing effects:
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1000);
+                    */
+                    event.preventDefault();
+                });
+            })
+        </script>
+
+        <script type="text/javascript">
+
+            $(window).load(function () {
+
+
+                var $container = $('.portfolioContainer'),
+                    $body = $('body'),
+                    colW = 375,
+                    columns = null;
+
+
+                $container.isotope({
+                    // disable window resizing
+                    resizable: true,
+                    masonry: {
+                        columnWidth: colW
+                    }
+                });
+
+                $(window).smartresize(function () {
+                    // check if columns has changed
+                    var currentColumns = Math.floor(($body.width() - 30) / colW);
+                    if (currentColumns !== columns) {
+                        // set new column count
+                        columns = currentColumns;
+                        // apply width to container manually, then trigger relayout
+                        $container.width(columns * colW)
+                          .isotope('reLayout');
+                    }
+
+                }).smartresize(); // trigger resize to set container width
+                $('.portfolioFilter a').click(function () {
+                    $('.portfolioFilter .current').removeClass('current');
+                    $(this).addClass('current');
+
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({
+
+                        filter: selector,
+                    });
+                    return false;
+                });
+
+            });
+
+        </script>
 	</body>
 </html>

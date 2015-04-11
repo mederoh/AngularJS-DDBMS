@@ -30,13 +30,13 @@
     <Compile Include="php\content.php" />
     <Compile Include="php\contentInfo.php" />
     <Compile Include="php\DBI.php" />
-    <Compile Include="scripts\app.js" />
-    <Compile Include="scripts\controllerCollection.js" />
-    <Compile Include="scripts\directiveCollection.js" />
+    <Compile Include="js\app.js" />
+    <Compile Include="js\controllerCollection.js" />
+    <Compile Include="js\directiveCollection.js" />
     <Compile Include="styles\bootstrap-theme.min.css" />
-    <Compile Include="styles\bootstrap.min.css" />
-    <Compile Include="styles\index.css" />
-    <Compile Include="styles\ng-table.min.css" />
+    <Compile Include="css\bootstrap.min.css" />
+    <Compile Include="css\index.css" />
+    <Compile Include="css\ng-table.min.css" />
     <Compile Include="index.html" />
   </ItemGroup>
   <ItemGroup>
@@ -44,12 +44,66 @@
     <Folder Include="aspnet_client\system_web\4_0_30319" />
     <Folder Include="aspnet_client\system_web" />
     <Folder Include="aspnet_client" />
+    <Folder Include="css\" />
+    <Folder Include="fonts\" />
     <Folder Include="html\content" />
     <Folder Include="html\menu" />
     <Folder Include="html" />
+    <Folder Include="img\" />
     <Folder Include="js" />
     <Folder Include="php" />
     <Folder Include="scripts" />
     <Folder Include="styles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\sticky-footer.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\bg-map.png" />
+    <Content Include="img\c-liogo1.png" />
+    <Content Include="img\c-liogo2.png" />
+    <Content Include="img\c-liogo3.png" />
+    <Content Include="img\c-liogo4.png" />
+    <Content Include="img\c-liogo5.png" />
+    <Content Include="img\client-pic1.jpg" />
+    <Content Include="img\footer-logo.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\imac.png" />
+    <Content Include="img\iphone.png" />
+    <Content Include="img\list-style.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\macbook-pro.png" />
+    <Content Include="img\pw_maze_black.png" />
+    <Content Include="img\pw_maze_black_2X.png" />
+    <Content Include="img\res_nav_click.png" />
+    <Content Include="img\section-bg1.jpg" />
+    <Content Include="img\section-bg2.jpg" />
+    <Content Include="img\small-logo.png" />
+    <Content Include="img\team-leader-pic1.jpg" />
+    <Content Include="img\team-leader-pic2.jpg" />
+    <Content Include="img\team-leader-pic3.jpg" />
+    <Content Include="img\Thumbs.db" />
+    <Content Include="img\wp.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\classie.js" />
+    <Content Include="js\html5element.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery-scrolltofixed.js" />
+    <Content Include="js\jquery.1.8.3.min.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.isotope.js" />
+    <Content Include="js\respond-1.1.0.min.js" />
+    <Content Include="js\wow.js" />
   </ItemGroup>
 </Project>
