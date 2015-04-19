@@ -24,7 +24,7 @@
 
 			$scope.loadInfo = function(id) {
 				$scope.ID = id;
-				$scope.contentHTML = "./html/content/loadInfo.html"
+				$scope.contentHTML = "./html/content/loadInfo.html";
 			}
 
 			$scope.init();

@@ -15,6 +15,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="css\bootstrap.min.css" />
     <Compile Include="html\content\loadInfo.html" />
     <Compile Include="html\content\prisonerList.html" />
     <Compile Include="html\menu\prisonMenu.html" />
@@ -34,7 +35,6 @@
     <Compile Include="js\controllerCollection.js" />
     <Compile Include="js\directiveCollection.js" />
     <Compile Include="styles\bootstrap-theme.min.css" />
-    <Compile Include="css\bootstrap.min.css" />
     <Compile Include="css\index.css" />
     <Compile Include="css\ng-table.min.css" />
     <Compile Include="index.html" />
@@ -58,6 +58,7 @@
   <ItemGroup>
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\collapse.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\sticky-footer.css" />
